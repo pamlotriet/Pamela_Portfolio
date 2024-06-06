@@ -1,1 +1,43 @@
-<p>about works!</p>
+<div class="flex flex-col bg-primary">
+    <ng-container *ngIf="show">
+        <div class="flex flex-row text-2xl text-white bg-primary sticky h-20 -top-0 items-center">
+            <button class="flex items-center font-bangers" [routerLink]="['about.buttons.backHomeLink' | translate]">
+                <img class="w-6 h-6 items-center m-4 mr-2" src="assets/images/AlienIcon.png" />{{
+                "about.buttons.backHomeText" | translate }}
+            </button>
+        </div>
+        <div class="grid grid-cols-3">
+            <h1 class="text-white text-4xl font-bangers mb-8 m-10">
+                {{ "about.headings.about" | translate }}
+            </h1>
+            <div class="col-start-1 col-span-2 m-10 mr-0 items-center justify-center h-591 overflow-y-auto">
+                <p class="text-xl font-sans text-white text-justify mb-8">
+                    {{ "about.paragraphs.p1" | translate }}
+                </p>
+                <p class="text-xl font-sans text-white text-justify mb-8">
+                    {{ "about.paragraphs.p2" | translate }}
+                </p>
+                <p class="text-xl font-sans text-white text-justify mb-8">
+                    {{ "about.paragraphs.p3" | translate }}
+                </p>
+                <p class="text-xl font-sans text-white text-justify">
+                    {{ "about.paragraphs.p4" | translate }}
+                </p>
+            </div>
+            <div class=" flex col-start-3 col-span-1 mr-10 items-center justify-center">
+                <div class="flex items-center">
+                    <div
+                        class="flex justify-center items-center w-340 h-591 rounded-20px shadow-custom-image-container">
+                        <img class="w-285 h-536" src="assets/images/Pam_portfolio_photo-min.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container class="spaceship" *ngIf="!show">
+        <img class="spaceshipImg" src="assets/images/Pam_se_spaceship_Regs.png">
+    </ng-container>
+</div>
+
+<!-- TODO : Add skills
+TODO: Update scrollbar style -->
