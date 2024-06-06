@@ -4,14 +4,11 @@
 
     </div>
     <div class="w-40 h-full flex justify-center items-center flex-col">
-        <div class="AboutMe">
-            <button class="homeButtons" routerLink="/aboutme">ABOUT ME</button>
-        </div>
-        <div class="MyWork">
-            <button class="homeButtons" routerLink="/mywork">MY WORK</button>
-        </div>
-        <div class="ContactMe">
-            <button class="homeButtons" routerLink="/contactme">CONTACT ME</button>
-        </div>
+        <app-button text="{{'home.buttons.about' | translate}}"
+            [link]="'home.buttons.aboutLink' | translate"></app-button>
+        <app-button text="{{'home.buttons.work' | translate}}"
+            [link]="'home.buttons.workLink' | translate"></app-button>
+        <app-button text="{{'home.buttons.contact' | translate}}"
+            [link]="'home.buttons.contactLink' | translate"></app-button>
     </div>
 </div>
