@@ -1,0 +1,12 @@
+{
+    "home":{
+        "buttons": {
+            "about" : "ABOUT ME",
+            "work" : "MY WORK",
+            "contact" : "CONTACT ME",
+            "aboutLink" : "about",
+            "workLink" : "work",
+            "contactLink" : "contact"
+        }
+    }
+}
