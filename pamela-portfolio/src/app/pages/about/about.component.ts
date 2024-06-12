@@ -3,11 +3,18 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../../components/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, TranslateModule, RouterModule],
+  imports: [
+    CommonModule,
+    ButtonComponent,
+    TranslateModule,
+    RouterModule,
+    NavbarComponent,
+  ],
   templateUrl: './about.component.html',
 })
 export class AboutComponent implements OnInit {
