@@ -4,6 +4,9 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { Observable } from 'rxjs';
+import { Paragraph } from '../../models/project.model';
+import { ProjectService } from '../../services/product.service';
 
 @Component({
   selector: 'app-about',
@@ -21,6 +24,9 @@ export class AboutComponent implements OnInit {
   show = false;
   seconds = 2;
 
+  paragraphs$: Observable<Paragraph[]> | undefined;
+  constructor(private projectService: ProjectService) {}
+
   showContent() {
     this.show = true;
     return this.show;
@@ -33,9 +39,8 @@ export class AboutComponent implements OnInit {
     audio.play();
   }
 
-  constructor() {}
-
   ngOnInit(): void {
+    this.paragraphs$ = this.projectService.getAboutParagraphs();
     this.playAudio();
     setInterval(() => {
       this.showContent();
