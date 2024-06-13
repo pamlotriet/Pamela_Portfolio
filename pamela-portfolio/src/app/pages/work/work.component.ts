@@ -1,17 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { Observable } from 'rxjs';
+import { Project } from '../../models/project.model';
+import { ProjectService } from '../../services/product.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-work',
   standalone: true,
-  imports: [CommonModule, NavbarComponent],
+  imports: [CommonModule, NavbarComponent, TranslateModule],
   templateUrl: './work.component.html',
-  styleUrl: './work.component.css',
 })
 export class WorkComponent {
-  constructor() {}
-
+  projects$: Observable<Project[]> | undefined;
+  constructor(private projectService: ProjectService) {}
   show = false;
   seconds = 2;
 
@@ -32,5 +35,7 @@ export class WorkComponent {
     setInterval(() => {
       this.showContent();
     }, this.seconds * 1000);
+
+    this.projects$ = this.projectService.getProjects();
   }
 }
