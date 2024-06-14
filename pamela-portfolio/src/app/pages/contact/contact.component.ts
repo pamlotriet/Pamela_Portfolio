@@ -1,12 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { ButtonComponent } from '../../components/button/button.component';
+import { TextareaComponent } from '../../components/textarea/textarea.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslateModule,
+    NavbarComponent,
+    ButtonComponent,
+    TextareaComponent,
+  ],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  show = false;
+  seconds = 2;
 
+  showContent() {
+    this.show = true;
+    return this.show;
+  }
+
+  playAudio() {
+    let audio = new Audio();
+    audio.src = 'assets/Spaceship.wav';
+    audio.load();
+    audio.play();
+  }
+
+  ngOnInit(): void {
+    this.playAudio();
+    setInterval(() => {
+      this.showContent();
+    }, this.seconds * 1000);
+  }
 }

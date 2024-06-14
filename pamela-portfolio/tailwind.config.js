@@ -13,11 +13,15 @@ module.exports = {
         50: "50%",
         340: "340px",
         285: "285px",
+        120: "120px",
+        713: "713px"
       },
       height: {
         500: "500px",
         591: "591px",
         536: "536px",
+        35:"35px",
+        260: "260px"
       },
       borderRadius: {
         "20px": "20px",
@@ -37,6 +41,7 @@ module.exports = {
       },
       animation: {
         runaccross: "runaccross 2s linear infinite",
+        runaccrossLeft: "runaccrossLeft 2s linear infinite",
       },
       keyframes: {
         runaccross: {
@@ -45,6 +50,14 @@ module.exports = {
           },
           to: {
             transform: "translateX(200%)",
+          },
+        },
+        runaccrossLeft: {
+          from: {
+            transform: "translateX(200%)",
+          },
+          to: {
+            transform: "translateX(-200%)",
           },
         },
       }
