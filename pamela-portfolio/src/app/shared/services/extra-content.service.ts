@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Paragraph, Project } from '../models/project.model';
+import { Paragraph, Project } from '../models/extra-content.models';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProjectService {
+export class ExtraContent {
   constructor(private translate: TranslateService) {}
 
   getProjects(): Observable<Project[]> {

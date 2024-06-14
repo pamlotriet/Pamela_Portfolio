@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { Observable } from 'rxjs';
-import { Project } from '../../models/project.model';
-import { ProjectService } from '../../services/product.service';
+import { Project } from '../../shared/models/extra-content.models';
+import { ExtraContent } from '../../shared/services/extra-content.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -14,7 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class WorkComponent {
   projects$: Observable<Project[]> | undefined;
-  constructor(private projectService: ProjectService) {}
+  constructor(private extraContentService: ExtraContent) {}
   show = false;
   seconds = 2;
 
@@ -36,6 +36,6 @@ export class WorkComponent {
       this.showContent();
     }, this.seconds * 1000);
 
-    this.projects$ = this.projectService.getProjects();
+    this.projects$ = this.extraContentService.getProjects();
   }
 }

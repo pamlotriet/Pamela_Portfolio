@@ -5,8 +5,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { Observable } from 'rxjs';
-import { Paragraph } from '../../models/project.model';
-import { ProjectService } from '../../services/product.service';
+import { Paragraph } from '../../shared/models/extra-content.models';
+import { ExtraContent } from '../../shared/services/extra-content.service';
 
 @Component({
   selector: 'app-about',
@@ -25,7 +25,7 @@ export class AboutComponent implements OnInit {
   seconds = 2;
 
   paragraphs$: Observable<Paragraph[]> | undefined;
-  constructor(private projectService: ProjectService) {}
+  constructor(private extraContentService: ExtraContent) {}
 
   showContent() {
     this.show = true;
@@ -40,7 +40,7 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.paragraphs$ = this.projectService.getAboutParagraphs();
+    this.paragraphs$ = this.extraContentService.getAboutParagraphs();
     this.playAudio();
     setInterval(() => {
       this.showContent();
