@@ -1,3 +1,4 @@
+@if (show){
 <div class="bg-primary flex flex-row h-screen justify-center items-center p-16 custom-scrollbar">
     <div class="w-50 h-full flex justify-end items-center">
         <img class="flex h-500 w-" src="assets/images/home.png" alt="Image Unavailable">
@@ -12,3 +13,9 @@
             [link]="'home.buttons.contactLink' | translate"></app-button>
     </div>
 </div>
+
+}@else {
+<div class="flex justify-center items-center h-screen w-screen overflow-hidden  bg-primary">
+    <img class="animate-runaccrossLeft" src="assets/images/spaceship-left.svg" alt="Error loading image" />
+</div>
+}

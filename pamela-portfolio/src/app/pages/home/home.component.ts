@@ -9,4 +9,26 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, ButtonComponent, TranslateModule],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  show = false;
+  seconds = 2;
+
+  showContent() {
+    this.show = true;
+    return this.show;
+  }
+
+  playAudio() {
+    let audio = new Audio();
+    audio.src = 'assets/Spaceship.wav';
+    audio.load();
+    audio.play();
+  }
+
+  ngOnInit(): void {
+    this.playAudio();
+    setInterval(() => {
+      this.showContent();
+    }, this.seconds * 1000);
+  }
+}

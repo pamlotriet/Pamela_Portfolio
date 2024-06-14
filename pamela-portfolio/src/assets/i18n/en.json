@@ -48,5 +48,15 @@
         "link": ""
       }
     ]
+  },
+  "contact":{
+    "heading":"CONTACT ME",
+    "subHeading":"Send me a message and I will get back to you",
+    "phone": "068 4233 681",
+    "email": "pamela.lotriet@gmail.com",
+    "linkdn": "Pamela Lotriet",
+    "emailPlaceholder": "Please Enter your email address",
+    "messagePlaceholder":"Please Enter your message",
+    "buttonText": "SEND"
   }
 }

@@ -1,1 +1,41 @@
-<p>contact works!</p>
+@if (show) {
+<div class="bg-primary h-screen w-screen overflow-auto">
+    <div class="sticky top-0">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="flex flex-row justify-center items-center h-full w-full">
+        <div class="flex flex-col items-center p-4 mr-20">
+            <img class="mb-4" src="assets/images/ContactAlien.png" alt="Failed to load image" />
+            <div class="flex flex-col items-center">
+                <p class="text-white font-sans m-2">
+                    <a><i class="pi pi-mobile pr-2"></i>{{'contact.phone'| translate}}</a>
+                </p>
+                <p class="text-white font-sans m-2">
+                    <a><i class="pi pi-envelope pr-2"></i>{{'contact.email'|translate}}</a>
+                </p>
+                <p class="text-white font-sans m-2">
+                    <a><i class="pi pi-linkedin pr-2"></i>{{'contact.linkdn'|translate}}</a>
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col p-4">
+            <h1 class="text-white text-5xl font-bangers mb-2">{{'contact.heading' | translate}}</h1>
+            <h2 class="text-white text-lg font-sans mb-8">{{'contact.subHeading' | translate}}</h2>
+            <div class=" flex flex-col items-center">
+                <app-textarea [placeholder]="'contact.emailPlaceholder'| translate"
+                    classElements="h-16 w-713 resize-none mt-8 mb-8"></app-textarea>
+                <app-textarea [placeholder]="'contact.messagePlaceholder'| translate"
+                    classElements="h-260 w-713 resize-none"></app-textarea>
+                <div class="flex flex-row-reverse w-full">
+                    <app-button [text]="'contact.buttonText'| translate"
+                        classElements=" text-sm h-35 w-120 rounded-20px bg-primary text-white shadow-custom hover:shadow-custom-hover focus:shadow-custom-focus text-3xl mt-8 mb-8 border-none text-bangers cursor-pointer"></app-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+} @else {
+<div class="flex justify-center items-center h-screen w-screen overflow-hidden bg-primary">
+    <img class="animate-runaccross" src="assets/images/spaceship.svg" alt="Error loading image" />
+</div>
+}
