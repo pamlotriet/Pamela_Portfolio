@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { Observable } from 'rxjs';
 import { Project } from '../../shared/models/extra-content.models';
 import { ExtraContent } from '../../shared/services/extra-content.service';

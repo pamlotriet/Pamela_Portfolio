@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ButtonComponent } from '../../components/button/button.component';
+import { ButtonComponent } from '../../shared/components/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { Observable } from 'rxjs';
 import { Paragraph } from '../../shared/models/extra-content.models';
 import { ExtraContent } from '../../shared/services/extra-content.service';

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../../components/button/button.component';
+import { ButtonComponent } from '../../shared/components/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

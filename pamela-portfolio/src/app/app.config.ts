@@ -13,7 +13,7 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
-import { CustomTranslateLoader } from '../translators/translate-loader';
+import { CustomTranslateLoader } from './shared/translators/translate-loader';
 import { provideClientHydration } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {

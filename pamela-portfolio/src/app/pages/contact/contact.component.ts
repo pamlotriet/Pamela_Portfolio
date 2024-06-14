@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { ButtonComponent } from '../../components/button/button.component';
-import { TextareaComponent } from '../../components/textarea/textarea.component';
+import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
+import { ButtonComponent } from '../../shared/components/button/button.component';
+import { TextareaComponent } from '../../shared/components/textarea/textarea.component';
 
 @Component({
   selector: 'app-contact',
