@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, ButtonComponent, TranslateModule],
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
   show = false;
   seconds = 2;
 

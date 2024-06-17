@@ -5,6 +5,6 @@ export interface Project {
   link?: string;
 }
 
-export interface Paragraph{
-  paragraph: string
+export interface Paragraph {
+  paragraph: string;
 }
