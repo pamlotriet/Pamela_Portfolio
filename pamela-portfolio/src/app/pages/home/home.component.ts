@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../../shared/components/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, ButtonComponent, TranslateModule],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   show = false;
   seconds = 2;
 
@@ -19,7 +19,7 @@ export class HomeComponent {
   }
 
   playAudio() {
-    let audio = new Audio();
+    const audio = new Audio();
     audio.src = 'assets/Spaceship.wav';
     audio.load();
     audio.play();

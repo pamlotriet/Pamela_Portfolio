@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 export class CustomTranslateLoader implements TranslateLoader {
   constructor(private http: HttpClient) {}
 
-  getTranslation(lang: string): Observable<any> {
+  getTranslation(lang: string): Observable<object> {
     return this.http.get(`/assets/i18n/${lang}.json`);
   }
 }

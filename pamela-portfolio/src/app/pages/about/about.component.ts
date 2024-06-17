@@ -33,7 +33,7 @@ export class AboutComponent implements OnInit {
   }
 
   playAudio() {
-    let audio = new Audio();
+    const audio = new Audio();
     audio.src = 'assets/Spaceship.wav';
     audio.load();
     audio.play();

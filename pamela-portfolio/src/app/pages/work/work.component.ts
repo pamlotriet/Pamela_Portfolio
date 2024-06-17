@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { Observable } from 'rxjs';
 import { Project } from '../../shared/models/extra-content.models';
@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, NavbarComponent, TranslateModule],
   templateUrl: './work.component.html',
 })
-export class WorkComponent {
+export class WorkComponent implements OnInit {
   projects$: Observable<Project[]> | undefined;
   constructor(private extraContentService: ExtraContent) {}
   show = false;
@@ -24,7 +24,7 @@ export class WorkComponent {
   }
 
   playAudio() {
-    let audio = new Audio();
+    const audio = new Audio();
     audio.src = 'assets/Spaceship.wav';
     audio.load();
     audio.play();

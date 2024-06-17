@@ -7,8 +7,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './button.component.html',
 })
 export class ButtonComponent {
-  @Input() text: string = '';
-  @Input() link: string = '';
+  @Input() text = '';
+  @Input() link = '';
   @Input() classElements =
     'w-64 h-20 rounded-20px bg-primary text-white shadow-custom hover:shadow-custom-hover focus:shadow-custom-focus text-3xl mt-8 mb-8 border-none text-bangers cursor-pointer';
 }
